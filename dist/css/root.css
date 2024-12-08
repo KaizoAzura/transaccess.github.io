@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mabry Pro", sans-serif;
+  box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f1f0e8;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #a6e3e9;
+  border-radius: 1rem;
+}
+
+body {
+  background-color: #f1f0e8;
+  color: #1a1a1d;
+}/*# sourceMappingURL=root.css.map */

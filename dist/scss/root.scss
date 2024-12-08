@@ -1,0 +1,29 @@
+$--primary-color: #71c9ce;
+$--secondary-color: #a6e3e9;
+$--tertiary-color: #cbf1f5;
+$--light-color: #e5e1da;
+$--white-color: #f1f0e8;
+$--black-color: #1a1a1d;
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Mabry Pro", sans-serif;
+  box-sizing: border-box;
+  //   scrollbar
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: $--white-color;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $--secondary-color;
+    border-radius: 1rem;
+  }
+}
+
+// style
+
+body {
+  background-color: $--white-color;
+  color: $--black-color;
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="TransAccess is an integrated transportation dashboard for efficient management of fleets, schedules, and travel transactions."
+    />
+    <meta
+      name="keywords"
+      content="TransAccess, transportation, transportation dashboard, fleet management, travel schedules, transportation management"
+    />
+    <meta name="author" content="TransAccess Team" />
+    <title>
+      TransAccess | Integrated Transportation Dashboard and Fleet Management
+    </title>
+
+    <!-- link css -->
+    <!-- boostrap link -->
+    <link
+      rel="stylesheet"
+      href="dist/bootstrap-5.3.3-dist/css/bootstrap.min.css"
+    />
+    <!-- style css -->
+    <link rel="stylesheet" href="dist/css/main.css" />
+    <!-- link icon remixicon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar fixed-top bg-white">
+      <div class="container-fluid">
+        <button
+          class="btn btn-outline-primary rounded-pill"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <i class="ri-menu-line"></i>
+          <span class="d-none d-sm-inline">Menu</span>
+        </button>
+        <!-- navbar brand -->
+        <a class="navbar-brand d-none d-sm-inline me-auto ms-3 fw-bold" href="#"
+          >TransAccess</a
+        >
+        <!-- support and login menu -->
+        <a href="#" class="btn btn-primary rounded-pill ms-auto"
+          ><i class="ri-customer-service-2-line"></i
+          ><span class="d-none d-sm-inline ms-2">Support</span></a
+        >
+        <!-- login button -->
+        <a href="#" class="btn btn-outline-primary rounded-pill ms-2"
+          ><i class="ri-login-box-line"></i
+          ><span class="d-none d-sm-inline ms-2">Login</span></a
+        >
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <a href="#!" class="profil-user d-flex align-items-center">
+              <img
+                src="src/img/profil-img.png"
+                width="50"
+                height="50"
+                class="rounded-pill border p-1"
+                alt="Profil Image User"
+              />
+              <div class="profil-describe ms-2">
+                <h6 class="mb-1 fw-bold">Nicolas Satria Afri Liyansa</h6>
+                <p class="mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </a>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <!-- main menu -->
+              <li class="nav-item">
+                <a
+                  class="btn w-100 d-flex align-items-center justify-content-between collapsed"
+                  data-bs-toggle="collapse"
+                  href="#MainMenu"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="MainMenu"
+                >
+                  Main Menu <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <div class="collapse show" id="MainMenu">
+                  <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2 active"
+                        ><i class="ri-home-9-line"></i
+                        ><span class="ms-2">Homepage</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-roadster-line"></i
+                        ><span class="ms-2">Transport</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-hotel-line"></i
+                        ><span class="ms-2">Hotel</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-coupon-line"></i
+                        ><span class="ms-2">Ticket</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-shopping-cart-line"></i
+                        ><span class="ms-2">Cart</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-mail-line"></i
+                        ><span class="ms-2">Inbox</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- link payment -->
+              <li class="nav-item">
+                <a
+                  class="btn w-100 d-flex align-items-center justify-content-between collapsed"
+                  data-bs-toggle="collapse"
+                  href="#Payment"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="Payment"
+                >
+                  Payment <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <div class="collapse" id="Payment">
+                  <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-add-box-line"></i
+                        ><span class="ms-2">Top up</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-wallet-line"></i
+                        ><span class="ms-2">Wallet</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-money-dollar-circle-line"></i
+                        ><span class="ms-2">Payment</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-discount-percent-line"></i
+                        ><span class="ms-2">Discount</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-bill-line"></i
+                        ><span class="ms-2">History Transactions</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <!-- other -->
+              <li class="nav-item">
+                <a
+                  class="btn w-100 d-flex align-items-center justify-content-between collapsed"
+                  data-bs-toggle="collapse"
+                  href="#Other"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="Other"
+                >
+                  Other <i class="ri-arrow-down-s-line"></i>
+                </a>
+                <div class="collapse" id="Other">
+                  <ul class="navbar-nav p-2">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-question-line"></i
+                        ><span class="ms-2">Help</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-customer-service-2-line"></i
+                        ><span class="ms-2">Cutsomer Service</span></a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link p-2"
+                        ><i class="ri-settings-4-line"></i
+                        ><span class="ms-2">Setting</span></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- content -->
+    <section class="content py-5 mt-3">
+      <div class="container-fluid">
+        <div class="row my-2">
+          <div class="col-5 d-flex align-items-center">
+            <h3 class="mb-0 fw-bold">Homepage</h3>
+          </div>
+          <div class="col-7 d-flex align-items-center justify-content-end">
+            <select
+              class="form-select"
+              id="weekSelect"
+              aria-label="Select Week"
+            >
+              <option value="1">Days</option>
+              <option value="2" selected>Week</option>
+              <option value="3">Month</option>
+              <option value="4">Year</option>
+            </select>
+            <a href="#!" class="btn btn-primary ms-2"
+              ><i class="ri-add-line"></i>
+              <span class="d-none d-sm-inline">New Ticket</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end content -->
+
+    <!-- javascript -->
+    <script src="dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
