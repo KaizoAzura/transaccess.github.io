@@ -2,106 +2,37 @@
 @import "button";
 
 // style
-// navbar
-.navbar {
-  .offcanvas {
-    background-color: $--white-color;
-    // profil user
-    .profil-user {
-      color: $--black-color;
-      text-decoration: none;
-      img {
-        border-color: $--tertiary-color;
-      }
-      .profil-describe {
-        h6,
-        p {
-          text-overflow: ellipsis;
-          display: block;
-          white-space: nowrap;
-          overflow: hidden;
-          width: 200px;
-        }
-        p {
-          font-size: 0.8rem;
-        }
-      }
-    }
 
-    // main menu
-    .navbar-nav {
-      .nav-item {
-        // button toggler
-        .btn {
-          background-color: #def0f2;
-          color: #2411cd;
-          &.collapsed {
-            background-color: transparent;
-            color: $--black-color;
-            i {
-              transform: rotate(0);
-              transition: 0.3s;
-            }
-          }
-          i {
-            transform: rotate(180deg);
-            transition: 0.3s;
-          }
-          &:focus {
-            border: 0;
-          }
-        }
-        .nav-link {
-          color: #6d6d6d;
-          i {
-            font-size: 1.1rem;
-          }
-          span {
-            font-size: 0.9rem;
-          }
-          &.active {
-            background-color: #def0f2;
-            color: #2411cd;
-          }
-          &:hover {
-            background-color: #def0f2;
-            color: #2411cd;
-          }
-        }
-      }
-    }
+.nav-link {
+  &.active {
+    color: $--primary-color !important;
+  }
+  &:hover {
+    color: $--primary-color;
   }
 }
 
-// content
-
-.content {
-  .form-select {
-    width: 100%;
-    border: 1px solid $--light-color;
-    &:focus {
-      box-shadow: none;
-      outline: none;
-      border: 0;
-    }
+.profil-user {
+  text-decoration: none;
+  h6,
+  p {
+    display: block;
+    text-overflow: ellipsis;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 
-// responsive
-
-@media screen and (min-width: 576px) {
-  .content {
-    .form-select {
-      width: 50%;
-    }
+.collapse-btn {
+  i {
+    transform: rotate(180deg);
+    transition: 0.3s;
   }
-}
-
-// responsive 768px
-@media screen and (min-width: 768px) {
-  .content {
-    .form-select {
-      width: 25%;
+  &.collapsed {
+    i {
+      transform: rotate(0);
+      transition: 0.3s;
     }
   }
 }

@@ -1,27 +1,14 @@
-@import "root";
+.navbar-toggler {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
 
-.btn {
-  i {
-    font-size: 1rem;
-  }
-  span {
-    font-size: 0.9rem;
-    font-weight: 300;
-  }
-
-  &.btn-primary {
-    background-color: $--primary-color;
-    border-color: $--primary-color;
-    &:hover {
-      background-color: $--secondary-color;
-    }
-  }
-  &.btn-outline-primary {
-    border-color: $--primary-color;
-    color: $--black-color;
-    &:hover {
-      background-color: $--primary-color;
-      color: $--white-color;
-    }
+.btn-close {
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border: 0;
   }
 }

@@ -1,34 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Mabry Pro", sans-serif;
-  box-sizing: border-box;
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
 }
 
-body {
-  background-color: #f1f0e8;
-  color: #1a1a1d;
-}
-
-.btn i {
-  font-size: 1rem;
-}
-.btn span {
-  font-size: 0.9rem;
-  font-weight: 300;
-}
-.btn.btn-primary {
-  background-color: #71c9ce;
-  border-color: #71c9ce;
-}
-.btn.btn-primary:hover {
-  background-color: #a6e3e9;
-}
-.btn.btn-outline-primary {
-  border-color: #71c9ce;
-  color: #1a1a1d;
-}
-.btn.btn-outline-primary:hover {
-  background-color: #71c9ce;
-  color: #f1f0e8;
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+  border: 0;
 }/*# sourceMappingURL=button.css.map */
