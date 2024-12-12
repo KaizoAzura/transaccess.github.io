@@ -3,4 +3,12 @@
   padding: 0;
   font-family: "Mabry Pro", sans-serif;
   box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 7.5px;
+  background-color: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #adb5bd;
+  border-radius: 1rem;
 }/*# sourceMappingURL=root.css.map */
