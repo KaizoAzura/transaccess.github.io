@@ -1,0 +1,10 @@
+@import "root";
+
+.form-control {
+  border: 2px solid $--border-color;
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border: 2px solid $--primary-color;
+  }
+}

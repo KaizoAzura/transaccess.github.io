@@ -1,14 +1,8 @@
-.navbar-toggler {
-  &:focus {
-    box-shadow: none;
-    outline: none;
-  }
-}
+@import "root";
 
-.btn-close {
-  &:focus {
-    box-shadow: none;
-    outline: none;
-    border: 0;
+.btn {
+  &.btn-primary {
+    background-color: $--primary-color;
+    border-color: $--primary-color;
   }
 }

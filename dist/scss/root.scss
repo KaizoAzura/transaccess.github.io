@@ -1,19 +1,105 @@
-$--primary-color: #0d6efd;
-$--gray-color: #adb5bd;
+$--bg-body-color: #f8f9fa;
+$--primary-color: #4fd1c5;
+$--dark-color: #2d3748;
+$--font-base: 16px;
+$--white-color: #ffffff;
+$--border-color: rgb(194, 194, 194);
 
-* {
+:root {
   margin: 0;
   padding: 0;
   font-family: "Mabry Pro", sans-serif;
   box-sizing: border-box;
-  &::-webkit-scrollbar {
-    width: 7.5px;
-    background-color: transparent;
-  }
+  color: $--dark-color;
+}
 
-  &::-webkit-scrollbar-thumb {
-    background-color: $--gray-color;
-    border-radius: 1rem;
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+);
+
+hr {
+  border: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(224, 225, 226, 0.5),
+    rgb(194, 194, 194),
+    rgba(224, 225, 226, 0.5)
+  );
+  height: 3px;
+}
+
+@mixin respond-to($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+  @if $size {
+    @media (min-width: #{$size}) {
+      @content;
+    }
   }
 }
+
+body {
+  font-size: 16px;
+  background-color: $--bg-body-color;
+
+  @include respond-to(sm) {
+    font-size: 17px;
+  }
+  @include respond-to(md) {
+    font-size: 18px;
+  }
+  @include respond-to(lg) {
+    font-size: 19px;
+  }
+  @include respond-to(xl) {
+    font-size: 20px;
+  }
+  @include respond-to(xxl) {
+    font-size: 21px;
+  }
+}
+
+h1 {
+  font-size: 28px; // Default
+
+  @include respond-to(sm) {
+    font-size: 30px;
+  }
+  @include respond-to(md) {
+    font-size: 32px;
+  }
+  @include respond-to(lg) {
+    font-size: 34px;
+  }
+  @include respond-to(xl) {
+    font-size: 36px;
+  }
+  @include respond-to(xxl) {
+    font-size: 38px;
+  }
+}
+
+p {
+  font-size: 14px;
+
+  @include respond-to(sm) {
+    font-size: 15px;
+  }
+  @include respond-to(md) {
+    font-size: 16px;
+  }
+  @include respond-to(lg) {
+    font-size: 17px;
+  }
+  @include respond-to(xl) {
+    font-size: 18px;
+  }
+  @include respond-to(xxl) {
+    font-size: 19px;
+  }
+}
+
 // style

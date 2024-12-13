@@ -1,82 +1,195 @@
 @import "root";
 @import "button";
+@import "form";
 
 // style
 
-.navbar {
-  .nav-link {
-    color: #fff;
-  }
-}
-.offcanvas {
-  .nav-link {
-    color: #000;
-  }
-}
-.nav-link {
-  &.active {
-    color: $--primary-color !important;
-  }
-  &:active {
-    transform: scale(0.9);
-    transition: 0.1s;
-  }
-  &:hover {
-    color: $--primary-color;
-  }
-}
-
-.profil-user {
-  text-decoration: none;
+// aside
+.aside {
+  background-color: $--white-color;
+  height: 100vh;
+  overflow-y: auto;
+  width: 100%;
+  transform: translateX(-100%);
   transition: 0.3s;
-
-  &:hover {
-    background-color: #f9f9f9;
+  z-index: 999;
+  box-shadow: 0 3px 10px #7e7e7e1e;
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $--primary-color;
+    border-radius: 1rem;
+  }
+  .navbar {
+    &::after {
+      display: none;
+    }
+  }
+  .navbar-brand {
+    position: relative;
+    width: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(
+        90deg,
+        rgb(224, 225, 226, 0),
+        rgba(224, 225, 226, 1),
+        rgba(224, 225, 226, 0)
+      );
+    }
+  }
+  &.expand {
+    transform: translateX(0);
     transition: 0.3s;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    .text-link {
+      margin-left: 0.5rem;
+    }
   }
-  h6,
-  p {
-    display: block;
-    text-overflow: ellipsis;
-    width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
+
+  .nav-link {
+    i {
+      color: $--primary-color;
+      padding: 0.1rem 0.35rem;
+    }
+    &.active {
+      i {
+        color: $--white-color;
+        background-color: $--primary-color;
+        border-radius: 0.25rem;
+      }
+    }
   }
 }
 
-.hero-bg {
+// navbar
+
+.navbar {
   position: relative;
+  z-index: 998;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgb(224, 225, 226, 0),
+      rgba(224, 225, 226, 1),
+      rgba(224, 225, 226, 0)
+    );
+  }
+  // nav-link
+  .nav-link {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    &.btn {
+      background-color: transparent;
+    }
+    &:hover {
+      transform: scale(1.05);
+      transition: 0.3s;
+    }
+    span {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+  }
 }
 
-.hero-bg .overlay {
-  background: linear-gradient(
-    135deg,
-    rgba(110, 66, 193, 0.8),
-    rgba(220, 53, 70, 0.8),
-    rgba(214, 51, 132, 0.8)
-  );
-  z-index: 10;
-  width: 100%;
-  height: 100%; /* Perbaikan */
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  overflow: hidden;
-  z-index: 9;
-  position: relative;
-}
-
-.payment {
-  position: relative;
-  margin-top: -200px;
-  z-index: 88;
-  a {
+.content {
+  .card {
+    border: 0;
     text-decoration: none;
+    box-shadow: 2px 2px 10px 0px #7e7e7e1e;
+    transition: 0.3s;
+    i {
+      background-color: $--primary-color;
+      color: $--white-color;
+      padding: 0.25rem 0.5rem;
+    }
+    &:hover {
+      transform: scale(1.025);
+      transition: 0.3s;
+    }
+    span {
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 150px;
+      white-space: nowrap;
+    }
+  }
+}
+
+// responsive
+
+@include respond-to(sm) {
+  .aside {
+    width: 50%;
+  }
+}
+
+@include respond-to(md) {
+  .navbar {
+    .nav-link {
+      font-size: 1.5em;
+    }
+  }
+}
+
+@include respond-to(lg) {
+  .navbar {
+    .nav-link {
+      font-size: 1.25em;
+      &.btn {
+        background-color: $--primary-color;
+      }
+    }
+  }
+}
+
+@include respond-to(xl) {
+  .aside {
+    transform: translateX(0);
+    width: 70px;
+    transition: width 0.3s ease;
+
+    .text-link {
+      display: none;
+      margin-left: 0;
+      transition: 0.3s;
+    }
+
+    &.expand {
+      width: 250px;
+      .text-link {
+        display: inline;
+        margin-left: 0.5rem;
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .main-content {
+    margin-left: 70px;
+    transition: margin-left 0.3s ease;
+
+    .aside.expand + & {
+      margin-left: 250px;
+    }
   }
 }

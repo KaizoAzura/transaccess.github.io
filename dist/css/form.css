@@ -100,7 +100,11 @@ p {
   }
 }
 
-.btn.btn-primary {
-  background-color: #4fd1c5;
-  border-color: #4fd1c5;
-}/*# sourceMappingURL=button.css.map */
+.form-control {
+  border: 2px solid rgb(194, 194, 194);
+}
+.form-control:focus {
+  box-shadow: none;
+  outline: none;
+  border: 2px solid #4fd1c5;
+}/*# sourceMappingURL=form.css.map */
